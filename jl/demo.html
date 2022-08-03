@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爱情纪录手册</title>
+
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 'Titillium Web', sans-serif;
+  background: linear-gradient(54deg, #9164ff, #8bfff4);
+  color: #3c3f64;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.timeline ul li div time {
+  position: absolute;
+  background: #f5af19;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeline ul li div div p {
+  text-align: center;
+}
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+.timeline ul li:nth-of-type(even) > div {
+  left: -439px;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: #8bfff4;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+</style>
+</head>
+<body>
+<section class="timeline">
+    <ul>
+        <li>
+            <div>
+                <time>2017,10,14</time>
+                <div class="discovery">
+                    <h1>第一次和你相遇</h1>
+                    <p>
+                        遇见一个爱笑的小憨憨
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>大家好我叫周丽娟</h1>
+                    <span>在讲台上一直笑个不停</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017,10,28</time>
+                <div class="discovery">
+                    <h1>我们在一起了</h1>
+                    <p>
+                        ZJ❤️ZLJ
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>手牵手我们一起走</h1>
+                    <span>张先生和周小姐</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017,10,28</time>
+                <div class="discovery">
+                    <h1>第一次甜蜜约会</h1>
+                    <p>
+                        以游玩为由，表白为实
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>地点：凤凰山</h1>
+                    <span>我向周小姐表白啦，羞羞羞</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017,10,28</time>
+                <div class="discovery">
+                    <h1>第一次拉你的手手</h1>
+                    <p>
+                        紧张到手心全是汗
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>不止我一个人紧张</h1>
+                    <span>周小姐手心也出汗了哈哈</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017,10,29</time>
+                <div class="discovery">
+                    <h1>第一次紧紧拥抱</h1>
+                    <p>
+                        忍不住亲了周小姐一口
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>地点：一区操场</h1>
+                    <span>坐在草皮坦上</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017,10,29</time>
+                <div class="discovery">
+                    <h1>第一次看电影</h1>
+                    <p>
+                        在一起的第二天就去看电影啦
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>当时天气很冷</h1>
+                    <span>出电影院给周小姐披上了我的外套</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2018,08,27</time>
+                <div class="discovery">
+                    <h1>第一次浪漫旅行</h1>
+                    <p>
+                        这是第一次陪周小姐出去旅行
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>地点：南京</h1>
+                    <span>一个我们毕业工作的城市</span>
+                </div>
+            </div>
+        </li>
+		<li>
+		    <div>
+		        <time>2018,11,04</time>
+		        <div class="discovery">
+		            <h1>第一次周边小游</h1>
+		            <p>
+		                这是第一次陪周小姐去大通古镇
+		            </p>
+		        </div>
+		        <div class="scientist">
+		            <h1>这次拉着小手没那么紧张了</h1>
+		            <span>我们玩的很开心嘿嘿</span>
+		        </div>
+		    </div>
+		</li>
+		<li>
+		    <div>
+		        <time>2020,01,07</time>
+		        <div class="discovery">
+		            <h1>第一次去太湖</h1>
+		            <p>
+		                这是第一次带周小姐去我的母校
+		            </p>
+		        </div>
+		        <div class="scientist">
+		            <h1>我们爬了著名的天柱山</h1>
+		            <span>还有华亭湖西风洞等等</span>
+		        </div>
+		    </div>
+		</li>
+        <li>
+            <div>
+                <time>2022,06,03</time>
+                <div class="discovery">
+                    <h1>第一次去俺家</h1>
+                    <p>
+                        第一次带周小姐去我太湖老家
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>山清水秀</h1>
+                    <span>最有趣的应该是周小姐与“哞”的故事</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>
+
+</body>
+</html>
